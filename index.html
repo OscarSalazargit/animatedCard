@@ -1,0 +1,84 @@
+<!DOCTYPE
+ html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica de template</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/app.js" defer></script>
+</head>
+<body>
+    <!-- template -->
+    <template id="elTemplate">
+        <div class="product-card">
+            <img class="product-image" src="" alt="Product Image">
+            <h3><slot name="title">Product Name</slot> </h3>
+            <p><slot name="description">Product description goes here.</slot></p>
+            <p>Price: <slot name="price">0.00</slot>€</p>
+            <img src="assets/img/me_gusta.png" alt="me gusta" class="product-like">
+            <button class="btn-anadir">Lo quiero!</button>
+        </div>
+    </template>
+    <!-- Fin del template -->
+
+    <header class="header">
+        <h1 class="header__title">Tienda de Tamplates</h1>
+        
+    </header>
+
+    <div id="productContainer" class="cards">
+        <product-card>
+            <span slot="title">Viva la pepa</span>
+            <span slot="description">This is a great product!</span>
+            <span slot="price">19.99</span>
+        </product-card>
+        <product-card>
+            <span slot="description">Another amazing product!</span>
+            <span slot="price">35.95</span>
+        </product-card>
+        <product-card>
+            <span slot="description">Another amazing product!</span>
+            <span slot="price">24.95</span>
+        </product-card>
+        <product-card>
+            <span slot="description">Another amazing product!</span>
+            <span slot="price">24.95</span>
+        </product-card>
+        <product-card>
+            <span slot="description">Another amazing product!</span>
+            <span slot="price">24.95</span>
+        </product-card>
+        <product-card>
+            <span slot="description">Another amazing product!</span>
+            <span slot="price">24.95</span>
+        </product-card>
+        <product-card>
+            <span slot="description">Another amazing product!</span>
+            <span slot="price">24.95</span>
+        </product-card>
+        <product-card>
+            <span slot="description">Another amazing product!</span>
+            <span slot="price">24.95</span>
+        </product-card>
+        <product-card>
+            <span slot="description">Another amazing product!</span>
+            <span slot="price">24.95</span>
+        </product-card>
+        <product-card>
+            <span slot="description">Another amazing product!</span>
+            <span slot="price">24.95</span>
+        </product-card>
+        <product-card>
+            <span slot="description">Another amazing product!</span>
+            <span slot="price">24.95</span>
+        </product-card>
+    </div>
+    <dialog id="cookieDialog" class="dialog">
+        <p class="dialog__text">Este sitio utiliza cookies para mejorar tu experiencia. Es mentira no uso cookies es para un ejercicio.</p>
+        <button id="acceptarCookies" class="dialog__tbnAceptar">Aceptar</button>
+    </dialog>
+
+
+</body>
+</html>

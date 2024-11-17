@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif0;
+}
+.header {
+  padding: 1rem;
+  border-bottom: 2px solid grey;
+  margin-bottom: 2rem;
+  background-color: #ccc;
+}
+.header__title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.product-card {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 10px;
+  padding-top: 150px;
+  margin: 10px;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  overflow: hidden; /* To prevent image overflow */
+  transition: box-shadow 500ms;
+}
+.product-card:hover {
+  /* display: none; */
+  cursor: pointer;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: rotatex(15deg);
+  /* animation: libro 1s ease-in-out forwards; */
+}
+
+
+@keyframes libro {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(10px);
+    transform-origin: left;
+  }
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  filter: blur(2px);
+  z-index: 10;
+}
+
+.product-card:hover .product-image {
+  top: -10px;
+  filter: blur(0px);
+  transition: all 300ms ease-in-out forwards;
+}
+
+.product-card h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.product-card p {
+  margin: 5px 0;
+}
+.product-like{
+  width: 15%;
+  /* padding-top: 15px; */
+}
+.btn-anadir{
+  height: 3rem;
+  width: 80%;
+  border-radius: 10px;
+  padding: 5px 15px;
+  box-shadow: 5px 5px 3px gray;
+  line-height: 1rem;
+  font-size: 0.8rem;
+}
+.btn-anadir:hover{
+  color: white;
+  background-color: rgba(59, 59, 254, 0.729) ;
+  font-size: 0.9rem;
+  box-shadow: 2px 2px 3px gray;
+}
+
+
+/*EL modal*/
+.dialog {
+  margin: 0 auto;
+  margin-top: calc(100vh/2);
+  border: 3px solid rgba(59, 59, 254, 0.729);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  background-color: #c6c6c6;
+}
+.dialog__text{
+  margin-bottom: 15px;
+}
+.dialog__tbnAceptar {
+  padding: 10px 20px;
+  background-color: rgba(59, 59, 254, 0.729);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.dialog__tbnAceptar:hover {
+  color: rgba(59, 59, 254, 0.729);
+  background-color: #eaeaea;
+  border: 1px solid black;
+  box-shadow: -5px -5px 10px gray;
+}
